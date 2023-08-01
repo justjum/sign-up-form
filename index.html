@@ -5,26 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="background-image">
-        <img src="./images/tanks1.jpg" alt="Some stainless steel brewing tanks.">
-    </div>
-    <div class="container">
-        <div class="blurb"></div>
-            <h2>There are a whole bunch of words here so you should really just
-                click the sign-up button below. <em>Now.</em>
-            </h2>
-        <div class="form">
-            <fieldset>
-                <label for="first-name" class="form-entry">First Name</label><input type="text" class="text" id="first-name">
-                <label for="last-name" class="form-entry">Last Name</label><input type="text" class="last-name text" id="last-name">
-                <label for="email" class="form-entry">Email Address</label><input type="email" class="email" id="email">
-                <label for="phone-number" class="form-entry">Phone Number<input type="number" name="" id="phone-number" class="phone-number"></label>
-                <label for="password" id="password" class="form-entry">Password<input type="password" name="password" id="password"></label>
-                <label for="" class="confirm-password" id="form-entry">Confirm Password<input type="password" name="confirm-password" id="confirm-password"></label>
-            </fieldset>
-            <button class="submit">Submit!</button>
+    <div class="sign-up">
+        <div class="background-image">
+            <img src="./images/tanks1.jpg" alt="Some stainless steel brewing tanks.">
+        </div>
+        <div class="container">
+            <div class="blurb">
+                <h2>There are a whole bunch of words here so you should really just
+                    click the sign-up button below. <em>Now.</em>
+                </h2>
+            </div>
+            <form action="submit" id="sign-up">
+                <fieldset>
+                    <div>
+                        <label for="first-name" class="form-entry">First Name</label>
+                        <input type="text" class="text" id="first-name" required>
+                    </div>
+                    <div>    
+                        <label for="last-name" class="form-entry">Last Name</label>
+                        <input type="text" class="last-name text" id="last-name" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email" class="form-entry">Email Address</label>
+                        <input type="email" class="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="phone-number" class="form-entry">Phone Number</label>
+                        <input type="number" name="" id="phone-number" class="phone-number" placeholder="(+xx) xxx xxx xxx" min-length="9" required>
+                    </div>
+                    <br>
+                    <div> 
+                        <label for="password" class="form-entry">Password</label>
+                        <input type="password" class="password" name="password" id="password" required minlength="8">
+                    </div>
+                    <div>    
+                        <label for="confirm-password" class="form-entry">Confirm Password</label>
+                        <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" required>
+                        
+                    </div>
+                    <p class="password-match" id="password-match"></p>
+                </fieldset>
+                
+            </form>
+            <div class="container-bottom">
+                <button class="submit" for="sign-up">Submit!</button>
+                <br>
+                <label for="submit">Already have an account? <a href="">Sign in.</a></label>
+            </div>
+            
         </div>
     </div>
 </body>

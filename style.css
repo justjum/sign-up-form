@@ -1,48 +1,113 @@
 * {
     color: steelblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 body {
-    display: flex;
-    flex-wrap: wrap;
+
     background-color: slategray;
     padding: 20px;
-    justify-content: center;
+    align-items: center;
 
 }
 
-.background-image {
+.sign-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    flex: 1;
+
 }
 
 img {
-    max-width: 30vw;
+    display: flex;
     min-width: 300px;
-    max-height: 95vh;
+    height: 95vh;
+    align-items: center;
+    object-fit: contain;
     
 }
 
 
-
 .container {
     display: flex;
-    flex-wrap: wrap;
-    max-height: 95vh;
+    flex-direction: column;
     min-width: 300px;
     max-width: 50vw;
     background-color: white;
-    padding-left: 2%;
-    padding-right: 5%;
-    padding-top: 10%;
-    padding-bottom: 10;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+h2 {
+    padding: 30px;
+    margin: 0;
 }
 
 fieldset {
     display: flex;
-    max-height: 40vh;
     padding: 30px;
     flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 10 10 5 10;
+    
+}
+
+fieldset>div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 40%;
+}
+
+input {
+    min-width: 200px;
+    min-height: 20px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+input:optional {
+    border-color: grey;
+}
+
+input:valid {
+    border: 3px solid green;
+}
+
+input:focus:invalid {
+    border: 5px solid red;
 }
 
 .form-entry {
     padding: 10px;
+}
+
+.submit {
+    padding: 5px;
+    margin: 30px;
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.container.container-bottom {
+    display: block;
+}
+
+.password-match {
+    color: red;
+}
+
+/* To remove arrows/spinner from number field*/
+/* Chrome, Safari, etc */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

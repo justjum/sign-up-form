@@ -35,19 +35,19 @@
                     </div>
                     <div>
                         <label for="phone-number" class="form-entry">Phone Number</label>
-                        <input type="number" name="" id="phone-number" class="phone-number" placeholder="(+xx) xxx xxx xxx" min-length="9" required>
+                        <input type="number" name="" id="phone-number" class="phone-number" placeholder="xxxx xxx xxx" min-length="9" max-length="10" required>
                     </div>
                     <br>
                     <div> 
                         <label for="password" class="form-entry">Password</label>
                         <input type="password" class="password" name="password" id="password" required minlength="8">
+                        <p class="password-length error" id="password-length"></p>
                     </div>
                     <div>    
                         <label for="confirm-password" class="form-entry">Confirm Password</label>
                         <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" required>
-                        
+                        <p class="password-match error" id="password-match"></p>
                     </div>
-                    <p class="password-match" id="password-match"></p>
                 </fieldset>
                 
             </form>

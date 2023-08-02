@@ -1,12 +1,11 @@
 * {
     color: steelblue;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
-
     background-color: grey;
-    padding: 1%;
     align-items: center;
 
 }
@@ -16,7 +15,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     flex: 1;
-    height: 95vh;
+    height: 100vh;
     
 }
 
@@ -35,24 +34,26 @@ img {
 
 }
 
-
-
-.logo-background {
+/*.logo-background {  *removed as transparent svg does the job*
     width: 100%;
-    min-height: 200px;
+    min-height: 250px;
     flex: 1;
     position: absolute;
-    top: 10rem;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
     background-color: grey;
     flex: 1;
     opacity: 0.6;
-}
+}*/
 
 .logo {
     width: 100%;
     position: absolute;
-    top: 10rem;
-    max-height: 200px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    max-height: 250px;
     color: white;
     opacity: 0.6;
 }
@@ -65,9 +66,9 @@ img {
     min-width: 300px;
     width: 100%;
     background-color: white;
-    padding: 30px;
-    justify-content: space-around;
+    justify-content: center;
     flex: 1;
+    background-color: rgb(175, 224, 255);
 }
 
 h2 {
@@ -75,26 +76,31 @@ h2 {
     margin: 0;
 }
 
-fieldset {
+.container-inputs {
     display: flex;
-    padding: 30px;
+    padding: 50px;
     flex-wrap: wrap;
-    border-radius: 10px;
-    box-shadow: 10 10 5 10;
-    
+    box-shadow: 5px 5px 10px lightgrey;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
 }
 
-fieldset>div {
+.container-inputs>div {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     width: 40%;
+    align-items: center;
 }
+
+
 
 
 input {
     min-width: 150px;
+    max-width: 300px;
     min-height: 20px;
     border-radius: 3px;
     border: 1px solid black;
@@ -120,8 +126,8 @@ input:focus {
 }
 
 .submit {
+    margin-top: 30px;
     padding: 5px;
-    margin: 30px;
     max-width: 150px;
     border-radius: 5px;
     font-size: 1.25rem;
@@ -131,8 +137,9 @@ input:focus {
 .container-bottom {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    padding-left: 30px;
 }
 
 .error-message {

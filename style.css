@@ -5,8 +5,8 @@
 
 body {
 
-    background-color: slategray;
-    padding: 20px;
+    background-color: grey;
+    padding: 1%;
     align-items: center;
 
 }
@@ -15,26 +15,55 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
     flex: 1;
+    height: 95vh;
+    
+}
 
+.background-image {
+    max-width: 500px;
+    position: relative;
+    align-items: center;
+    flex: 1;
 }
 
 img {
     display: flex;
-    min-width: 400px;
-    height: 95vh;
-    align-items: center;
-    object-fit: contain;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+
+}
+
+
+
+.logo-background {
+    width: 100%;
+    min-height: 200px;
     flex: 1;
+    position: absolute;
+    top: 10rem;
+    background-color: grey;
+    flex: 1;
+    opacity: 0.6;
+}
+
+.logo {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    max-height: 200px;
+    color: white;
+    opacity: 0.6;
 }
 
 
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 300px;
-    max-width: 50vw;
+    width: 100%;
     background-color: white;
     padding: 30px;
     justify-content: space-around;
@@ -69,6 +98,7 @@ input {
     min-height: 20px;
     border-radius: 3px;
     border: 1px solid black;
+    font-size: 1.25rem;
 }
 
 input:optional {
@@ -79,9 +109,11 @@ input:valid {
     border: 3px solid green;
 }
 
-input:focus:invalid {
-    border: 5px solid red;
+input:focus {
+    border: 5px solid steelblue;
 }
+
+
 
 .form-entry {
     padding: 10px;
@@ -92,14 +124,23 @@ input:focus:invalid {
     margin: 30px;
     max-width: 150px;
     border-radius: 5px;
+    font-size: 1.25rem;
+
 }
 
-.container.container-bottom {
-    display: block;
+.container-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error-message {
+    color: red;
 }
 
 .error {
-    color: red;
+    border-color: red;
 }
 
 /* To remove arrows/spinner from number field*/

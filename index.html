@@ -11,6 +11,11 @@
     <div class="sign-up">
         <div class="background-image">
             <img src="./images/tanks1.jpg" alt="Some stainless steel brewing tanks.">
+            <div class="logo-background">
+                
+            </div>
+            <img class="logo" src="./images/brewitionlogob&w.png" alt="brewition logo">
+            
         </div>
         <div class="container">
             <div class="blurb">
@@ -35,24 +40,24 @@
                     </div>
                     <div>
                         <label for="phone-number" class="form-entry">Phone Number</label>
-                        <input type="number" name="" id="phone-number" class="phone-number" placeholder="xxxx xxx xxx" min-length="9" max-length="10" required>
+                        <input type="number" name="" id="phone-number" class="phone-number" placeholder="xxxx xxx xxx" minlength="9" maxlength="10" required>
                     </div>
                     <br>
                     <div> 
                         <label for="password" class="form-entry">Password</label>
-                        <input type="password" class="password" name="password" id="password" required minlength="8">
-                        <p class="password-length error" id="password-length"></p>
+                        <input type="password" class="password error" name="password" id="password" required minlength="8">
+                        <p class="password-length error-message" id="password-length"></p>
                     </div>
                     <div>    
                         <label for="confirm-password" class="form-entry">Confirm Password</label>
-                        <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" required>
-                        <p class="password-match error" id="password-match"></p>
+                        <input type="password" class="confirm-password error" name="confirm-password" id="confirm-password" required minlength="8">
+                        <p class="password-match error-message" id="password-match"></p>
                     </div>
                 </fieldset>
                 
             </form>
             <div class="container-bottom">
-                <button class="submit" for="sign-up">Submit!</button>
+                <button class="submit" for="sign-up">Sign Up Now!</button>
                 <br>
                 <label for="submit">Already have an account? <a href="">Sign in.</a></label>
             </div>

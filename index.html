@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brewition Sign Up Page</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
@@ -45,19 +45,19 @@
                     <br>
                     <div> 
                         <label for="password" class="form-entry">Password</label>
-                        <input type="password" class="password error" name="password" id="password" required minlength="8">
+                        <input type="password" class="password" name="password" id="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,32}">
                         <p class="password-length error-message" id="password-length"></p>
                     </div>
                     <div>    
                         <label for="confirm-password" class="form-entry">Confirm Password</label>
-                        <input type="password" class="confirm-password error" name="confirm-password" id="confirm-password" required minlength="8">
+                        <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" required minlength="8">
                         <p class="password-match error-message" id="password-match"></p>
                     </div>
                 </div>
                 
             </form>
             <div class="container-bottom">
-                <button class="submit" for="sign-up">Sign Up Now!</button>
+                <button class="submit" form="sign-up">Sign Up Now!</button>
                 <br>
                 <label for="submit">Already have an account? <a href="">Sign in.</a></label>
             </div>

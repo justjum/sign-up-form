@@ -4,21 +4,38 @@ let passwordEntry = document.getElementById("password");
 let passwordConfirm = document.getElementById("confirm-password").value;
 let error1 = "";
 let error2 = "";
+let error3 = "";
+let error4 = "";
+let error5 = "";
 
 
 const enterPassword = document.querySelector(".password");
+const confirmPassword = document.querySelector(".confirm-password");
+const enterEmail = document.querySelector(".email");
+
+enterPassword.addEventListener('click', function() {
+    document.getElementById("password").setAttribute("minlength", "8");
+    document.getElementById("password").setAttribute("class", "error");
+});
+
 
 
 enterPassword.addEventListener('keyup', function() {
     passwordEntry = document.getElementById("password").value;
     passwordConfirm = document.getElementById("confirm-password").value;
     passwordLength(passwordEntry);
+    passwordCharacters(passwordEntry);
     passwordMatch(passwordEntry, passwordConfirm);
-    document.getElementById("password-length").innerHTML=`${error1}`;
+    document.getElementById("password-length").innerHTML=`${error1} <br> ${error3}`;
     document.getElementById("password-match").innerHTML=`${error2}`;
 });
 
-const confirmPassword = document.querySelector(".confirm-password");
+
+
+confirmPassword.addEventListener('click', function() {
+    document.getElementById("confirm-password").setAttribute("minlength", "8");
+    document.getElementById("confirm-password").setAttribute("class", "error");
+});
 
 confirmPassword.addEventListener('keyup', function() {
     passwordEntry = document.getElementById("password").value;
@@ -32,7 +49,7 @@ confirmPassword.addEventListener('keyup', function() {
 
 const passwordLength = function(currentPassword) {
     if(currentPassword.length < 8) {
-        error1 = "Password too short"
+        error1 = "Password must contain 8 or more characters"
     }
     else {
         error1 = "";
@@ -52,6 +69,21 @@ const passwordMatch = function(passwordEntry, passwordConfirm) {
     }
     return passwordMatch;
 }
+
+const passwordCharacters = function(currentPassword) {
+    if (currentPassword.match("(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])")) {
+        error3 = "";
+    }
+    else {
+        error3 = "Password must contain 1 uppercase, 1 lowercase, and 1 numeric character"
+    }
+}
+
+
+
+enterEmail.addEventListener('keyup', function() {
+    document.getElementById("email").setAttribute("class", "error");
+});
 
 
 /*  Below was the original password check.
